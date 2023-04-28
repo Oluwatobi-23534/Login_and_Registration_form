@@ -49,6 +49,9 @@ main {
     width: 45%;
     top: 0;
     left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 .carousel {
@@ -69,6 +72,13 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+form.sign-up-form {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .logo {
@@ -78,10 +88,10 @@ form {
 
 .logo img{
     width: 27px;
-    margin: 0.3rem;
+    margin-right: 0.3rem;
 }
 
-.logo h3 {
+.logo h4 {
     font-size: 1.1rem;
     margin-top: -9px;
     letter-spacing: -0.5px;
