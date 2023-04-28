@@ -1,4 +1,7 @@
 const inputs = document.querySelectorAll(".input-field");
+const toggle_button = document.querySelectorAll(".toggle");
+const main = document.querySelector("main");
+
 
 inputs.forEach((inp) => {
     inp.addEventListener("focus", () => {
@@ -7,5 +10,11 @@ inputs.forEach((inp) => {
     inp.addEventListener("blur", () => {
         if(inp.value !="") return;
         inp.classList.remove("active");
+    });
+});
+
+toggle_button.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        main.classList.toggle("sign-up-mode");
     });
 });
